@@ -39,19 +39,20 @@ class LoginViewController: UIViewController {
         $0.setLeftPaddingPoints(10)
         $0.attributedPlaceholder = NSAttributedString(string: "비밀번호", attributes: [.foregroundColor: UIColor.white])
         $0.isSecureTextEntry = true
+        $0.clearButtonMode = .never
         $0.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         $0.addTarget(self, action: #selector(textFieldDidBeginEditing), for: .editingDidBegin)
         $0.addTarget(self, action: #selector(textFieldDidEndEditing), for: .editingDidEnd)
     }
        
     private lazy var removePWButton = UIButton().then {
-        $0.setImage(UIImage(systemName: "x_circle"), for: .normal)
+        $0.setImage(UIImage(named: "x-circle"), for: .normal)
         $0.addTarget(self, action: #selector(removePWButtonTapped), for: .touchUpInside)
         $0.isHidden = true
     }
        
     private lazy var securityButton = UIButton().then {
-        $0.setImage(UIImage(systemName: "eye_slash.png"), for: .normal)
+        $0.setImage(UIImage(named: "eye-slash"), for: .normal)
         $0.addTarget(self, action: #selector(securityButtonTapped), for: .touchUpInside)
         $0.isHidden = true
     }
@@ -134,28 +135,16 @@ private extension LoginViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
         }
         
-//        removeIDButton.snp.makeConstraints{
-//            $0.centerY.equalTo(IDTextField)
-//            $0.height.width.equalTo(20)
-//            $0.trailing.equalTo(IDTextField.snp.trailing).offset(-20)
-//        }
-        
         securityButton.snp.makeConstraints{
-            $0.centerY.equalTo(PWTextField)
-            $0.height.width.equalTo(20)
-            $0.trailing.equalTo(PWTextField.snp.trailing).offset(-20)
-//            $0.centerY.equalToSuperview()
-//            $0.height.width.equalTo(20)
-//            $0.trailing.equalToSuperview().inset(20)
+            $0.centerY.equalToSuperview()
+            $0.height.width.equalTo(40)
+            $0.trailing.equalToSuperview()
         }
 
         removePWButton.snp.makeConstraints{
-            $0.centerY.equalTo(PWTextField)
+            $0.centerY.equalToSuperview()
             $0.height.width.equalTo(20)
-            $0.trailing.equalTo(removePWButton.snp.leading).offset(-20)
-//            $0.centerY.equalToSuperview()
-//            $0.height.width.equalTo(20)
-//            $0.trailing.equalToSuperview().inset(50)
+            $0.trailing.equalToSuperview().inset(40)
         }
         
         presentButton.snp.makeConstraints {
@@ -185,21 +174,11 @@ private extension LoginViewController {
             $0.height.equalTo(22)
         }
     }
-//    @objc
-//    private func removeIDButtonTapped() {
-//        IDTextField.text = ""
-//        removeIDButton.isHidden = true
-//        presentButton.isEnabled = false
-//        presentButtonIsEnabled()
-//    }
+
     
     @objc
     private func removePWButtonTapped() {
         PWTextField.text = ""
-        removePWButton.isHidden = true
-        securityButton.isHidden = true
-        presentButton.isEnabled = false
-        presentButtonIsEnabled()
     }
     
     @objc
@@ -241,6 +220,10 @@ private extension LoginViewController {
     func textFieldDidBeginEditing(sender: UITextField) {
         sender.layer.borderWidth = 1
         sender.layer.borderColor = UIColor.lightGray.cgColor
+        if sender == PWTextField {
+            removePWButton.isHidden = false
+            securityButton.isHidden = false
+        }
     }
 
     @objc
