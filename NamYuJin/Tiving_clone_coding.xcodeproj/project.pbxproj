@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14773D102A026F2500D89478 /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14773D0F2A026F2500D89478 /* MyPageTableViewCell.swift */; };
+		14773D122A02701800D89478 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14773D112A02701800D89478 /* MyPage.swift */; };
+		14773D142A03BCA500D89478 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14773D132A03BCA500D89478 /* UIImage+.swift */; };
+		14773D172A041B4400D89478 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14773D162A041B4400D89478 /* BaseViewController.swift */; };
+		1482092229FE789E00DB5B49 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482092129FE789E00DB5B49 /* MainViewController.swift */; };
+		1482092429FE78C800DB5B49 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1482092329FE78C800DB5B49 /* MyPageViewController.swift */; };
 		14AB988E29E27A0600DEBFEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AB988D29E27A0600DEBFEA /* AppDelegate.swift */; };
 		14AB989029E27A0600DEBFEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AB988F29E27A0600DEBFEA /* SceneDelegate.swift */; };
 		14AB989229E27A0600DEBFEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AB989129E27A0600DEBFEA /* ViewController.swift */; };
@@ -27,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14773D0F2A026F2500D89478 /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
+		14773D112A02701800D89478 /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
+		14773D132A03BCA500D89478 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		14773D162A041B4400D89478 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1482092129FE789E00DB5B49 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1482092329FE78C800DB5B49 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		14AB988A29E27A0600DEBFEA /* Tiving_clone_coding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tiving_clone_coding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14AB988D29E27A0600DEBFEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14AB988F29E27A0600DEBFEA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +115,11 @@
 				14AB989129E27A0600DEBFEA /* ViewController.swift */,
 				14AB98A129E27E9F00DEBFEA /* LoginViewController.swift */,
 				14AB98AB29E28CF400DEBFEA /* WelcomeViewController.swift */,
+				1482092129FE789E00DB5B49 /* MainViewController.swift */,
+				1482092329FE78C800DB5B49 /* MyPageViewController.swift */,
+				14773D0F2A026F2500D89478 /* MyPageTableViewCell.swift */,
+				14773D112A02701800D89478 /* MyPage.swift */,
+				14773D162A041B4400D89478 /* BaseViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -115,6 +132,7 @@
 				14AB98BA29E6947200DEBFEA /* UIFont+.swift */,
 				14AB98BC29E6B79C00DEBFEA /* UIButton+.swift */,
 				14AB98BE29E6BB2500DEBFEA /* UITextField+.swift */,
+				14773D132A03BCA500D89478 /* UIImage+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -228,13 +246,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				14AB98BB29E6947200DEBFEA /* UIFont+.swift in Sources */,
+				1482092229FE789E00DB5B49 /* MainViewController.swift in Sources */,
 				14AB98BF29E6BB2500DEBFEA /* UITextField+.swift in Sources */,
 				14AB98A229E27E9F00DEBFEA /* LoginViewController.swift in Sources */,
 				14AB989229E27A0600DEBFEA /* ViewController.swift in Sources */,
 				14AB988E29E27A0600DEBFEA /* AppDelegate.swift in Sources */,
+				14773D142A03BCA500D89478 /* UIImage+.swift in Sources */,
+				14773D122A02701800D89478 /* MyPage.swift in Sources */,
 				14AB98BD29E6B79D00DEBFEA /* UIButton+.swift in Sources */,
+				1482092429FE78C800DB5B49 /* MyPageViewController.swift in Sources */,
+				14773D102A026F2500D89478 /* MyPageTableViewCell.swift in Sources */,
 				14AB98AC29E28CF500DEBFEA /* WelcomeViewController.swift in Sources */,
 				14AB989029E27A0600DEBFEA /* SceneDelegate.swift in Sources */,
+				14773D172A041B4400D89478 /* BaseViewController.swift in Sources */,
 				14AB98AA29E280C600DEBFEA /* UIView+.swift in Sources */,
 				14AB98B329E6905D00DEBFEA /* UIColor+.swift in Sources */,
 			);

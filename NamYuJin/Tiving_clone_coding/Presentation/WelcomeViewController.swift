@@ -33,8 +33,8 @@ class WelcomeViewController: UIViewController {
         $0.setTitleColor(.white, for: .normal)
         $0.backgroundColor = .tvingRed
         $0.titleLabel?.font = .boldSystemFont(ofSize: 15)
-        $0.addTarget(self,
-        action: #selector(backButtonTapped), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(presentToMainViewController), for: .touchUpInside)
+//        $0.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -80,12 +80,28 @@ private extension WelcomeViewController {
     }
     
     @objc
-    func backButtonTapped() {
-        
-        if self.navigationController == nil {
-            self.dismiss(animated: true, completion: nil)
-        } else {
-            self.navigationController?.popViewController(animated: true)
-        }
+    func presentToMainViewController() {
+            let nextViewController = MainViewController()
+            nextViewController.modalPresentationStyle = .fullScreen
+            self.present(nextViewController, animated: true)
     }
+    
+    
+//    func pushToMainViewController() {
+//        let nextViewController = MainViewController()
+//        self.navigationController?.pushViewController(nextViewController, animated: true)
+//    }
+//
+//    @objc
+//    func backButtonTapped() {
+//        pushToMainViewController()
+////        let mainViewController = MainViewController()
+////        self.navigationController?.pushViewController(mainViewController, animated: true)
+//
+////        if self.navigationController == nil {
+////            self.dismiss(animated: true, completion: nil)
+////        } else {
+////            self.navigationController?.popViewController(animated: true)
+////        }
+//    }
 }
